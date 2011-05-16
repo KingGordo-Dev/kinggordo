@@ -1,0 +1,20 @@
+<div class="fields">
+  
+  
+<fieldset id="people">
+      <legend></legend> 
+      <ol>
+        <li>
+          <label for="first_name"><%= f.label :name, "Attribute:" %></label><br/>  
+            <%= f.text_field :name, :style =>"width:80%"  %>
+            <p class="remove">
+            <%= link_to_remove_fields "Remove Attribute", f %>
+            </p>
+        </li>
+      </ol> 
+</fieldset>
+  
+</div>   
+     
+    
+  

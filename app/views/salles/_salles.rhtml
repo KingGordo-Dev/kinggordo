@@ -1,0 +1,26 @@
+<%= hidden_field_tag :direction, params[:direction] %>
+<%= hidden_field_tag :sort, params[:sort] %>
+
+<table>
+  <tr class="pays">
+    <th><%= sortable "Name" %></th>
+    <th><%= sortable "District" %></th>
+    <th><%= sortable "Adresse" %></th>
+     
+  </tr>
+  
+  <% for salle in @salles %>
+    <tr class="result">
+      <td><%= link_to salle.name, salle %></td>
+      <td class="price"><%= salle.district %></td>
+      <td><%=  salle.adresse %></td>
+      <td class="destroy"><%= link_to 'Destroy', salle, :confirm => 'Are you sure?', :method => :delete %></td>
+      
+      
+    </tr>
+  <% end %>
+</table>
+
+<br/>
+<br/>
+<%= will_paginate @salles %>

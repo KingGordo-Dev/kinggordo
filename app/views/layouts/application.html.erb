@@ -1,14 +1,100 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Kinggordo</title>
+  <title>Loin d'Hollywood</title>
+  
+  
   <%= stylesheet_link_tag :all %>
-  <%= javascript_include_tag :defaults %>
+  
   <%= csrf_meta_tag %>
+  
+  <%= javascript_include_tag :defaults%>
+  <%= javascript_include_tag 'jquery-1.4.2.min.js', 'jquery-ui-1.8.2.custom.min.js', 'rails.js', 'autocomplete-rails.js' %>
+  <%= stylesheet_link_tag 'jquery-ui-1.8.2.custom.css' %>
+  <%= javascript_include_tag "application_jquery.js" %>
+  <%= javascript_include_tag "jquery.coda-slider-2.0.js" %>
+  
+  
+ 
+  
+  
+  
+  
+  
+  
+  
+  
+  <script type="text/javascript">
+		$().ready(function() {
+           $('#coda-slider-1').codaSlider({
+               
+              
+           });
+    });
+    
+	</script>
+	
+	
+	 
+  
 </head>
 <body>
+  
+  <div class="clear">&nbsp;</div>
+  
+  <div id="user_nav">
+    <% if user_signed_in? %>
+      Signed in as <%= current_user.email %> |
+      <%= link_to "Sign out", destroy_user_session_path %>
+    <% else %>
+      
+    <% end %>
+  </div>
+  
+  <!-- Header -->
+  <div id="Header">
+    <h1>Loin d'Hollywood</h1> 
+  </div>
+  <!-- Header -->
+    
+    <!-- TABS -->
+    <% if user_signed_in? %>
+    <div id="navbar_wrapper"> 
+      <div id="navbar"> 
+        <ul> 
+          <li><%= link_to "Films", films_path %></li>
+          <li><%= link_to "Theaters", salles_path %></li>
+          <%if @film%> 
+          <b><%=@film.name%></b>
+          <%end%>
+        </ul> 
+      </div> 
+    </div>
+    <%end%>
+    <!-- TABS -->
+  
+  
+  <% flash.each do |name, msg|%>
+  <%= content_tag :div, msg, :id=> "flash_#{name}" %>
+  <%end%>
+  
+  <div id="Wrapper">
+    
+    <%= yield %>
+      
+  </div>
+  
+  <br/>
+  <br/>
+  
+  <div id="footer">
+    Loin d'Hollywood © 2011. Tous droits réservés.
+  </div>
+  
+  
+  
 
-<%= yield %>
+
 
 </body>
 </html>

@@ -1,0 +1,1 @@
+$("#filmsearchs").html("<%= escape_javascript(render("filmsearchs")) %>");

@@ -1,0 +1,22 @@
+<div class="fields">
+  
+  
+<fieldset id="people">
+       
+      <ol>
+        <li>
+          <label for="first_name"><%= f.label :name, "Person:" %></label><br/>  
+            <%= f.text_field :name, :autocomplete => films_autocomplete_person_name_path, :style =>"width:80%"  %>
+            <p class="remove">
+            <%= link_to_remove_fields "Remove person", f %>
+            </p>
+        </li>
+      </ol> 
+</fieldset>
+  
+    
+     
+    
+  
+  
+</div>

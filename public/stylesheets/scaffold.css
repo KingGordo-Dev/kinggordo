@@ -1,10 +1,16 @@
-body { background-color: #fff; color: #333; }
+body{
+	background-color: #E5E5E5;
+    color: #222222;
+    font-family: "Lucida Grande",verdana,arial,helvetica,sans-serif;
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+	font-size:   12px;
+	line-height: 16px;
 
-body, p, ol, ul, td {
-  font-family: verdana, arial, helvetica, sans-serif;
-  font-size:   13px;
-  line-height: 18px;
 }
+
+body{background: none repeat scroll 0 0 #E5E5E5;}
 
 pre {
   background-color: #eee;
@@ -12,17 +18,221 @@ pre {
   font-size: 11px;
 }
 
-a { color: #000; }
-a:visited { color: #666; }
-a:hover { color: #fff; background-color:#000; }
-
-div.field, div.actions {
-  margin-bottom: 10px;
+blockquote {
+    color: #666666;
+    font-size: 12px;
+    margin: 20px;
 }
 
-#notice {
-  color: green;
+h1 {
+    border-bottom: 0 none;
+    color: #333333;
+    font-family: "Lucida Grande",arial,sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+	
 }
+h2 {
+    color: #333333;
+    font-family: "Lucida Grande",arial,sans-serif;
+    font-size: 14px;
+    margin: 20px 0 5px 0;
+    padding: 0;
+}
+
+h3 {
+    color: #666666;
+    font-family: "Lucida Grande",arial,sans-serif;
+    font-size: 14px;
+    margin: 20px 0 0;
+    padding: 0;
+}
+
+p {font-size: 12px; line-height: 16px;}
+
+ol, ul, li {margin: 0;padding: 0;}
+ol, ul, li { list-style-type: none;}
+li {font-size: 11px; line-height: 13px; padding: 3px 0;}
+
+td, th {padding: 3px;text-align: left;}
+
+
+a {padding: 1px;text-decoration: underline;}
+a:link { color: #0033CC;}
+a:visited { color: #0033CC;}
+a:hover { color: #000;text-decoration: none;}
+a.image:link, a.image:visited, a.image:hover {background: none repeat scroll 0 0 transparent; padding: 0; text-decoration: none;}
+a.image img { border: medium none;}
+
+/*----------------------------------------------------------*/
+.ClearAll {
+    clear: both;
+    font-size: 0;
+    padding: 0;
+}
+
+#Wrapper {
+    width: 100%
+    margin: 0 auto;
+    
+}
+
+
+
+/*----------------------------------------------------------*/
+
+#Header {
+    background: none repeat scroll 0 0 #003366;
+    position: relative;
+    text-align: left;
+}
+#Header h1 {
+    color: #FFCC00;
+    font-size: 24px;
+    font-weight: normal;
+    padding: 30px 0 10px 30px;
+}
+
+/*----------------------------------------------------------*/
+#Left {
+    position:relative;
+    margin: 0 auto;
+	margin-left: 30px;
+    padding: 0;
+    text-align: left;
+    width: 70%;
+	border: 1px solid #ddd; 
+	padding: 20px 20px 20px 20px; 
+	margin-top:30px;
+	background: #fff;
+			
+	/* -- CSS3 - define rounded corners for the form -- */	
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px; 		
+	
+	/* -- CSS3 - create a background graident -- */
+	background: -webkit-gradient(linear, 0% 0%, 0% 40%, from(#EEE), to(#FFFFFF)); 
+	background: -moz-linear-gradient(0% 40% 90deg,#FFF, #EEE); 
+	
+	/* -- CSS3 - add a drop shadow -- */
+	-webkit-box-shadow:50px 50px 50px #ccc;
+	-moz-box-shadow:50px 50px 50px #ccc; 
+	box-shadow:50px 50px 50px #ccc;
+}
+
+#Left h1 {
+    border-bottom: 0 none;
+    color: #333333;
+    font-family: "Lucida Grande",arial,sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+    padding: 10px;
+	background:#708DAF; height:20px; margin-bottom:30px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+
+
+/*----------------------------------------------------------*/
+
+#Right {
+    position:absolute;
+    margin-top: -25px;
+	margin-left: 100%;
+	    			
+}
+
+#Right ol {
+    padding-left: 20px;
+}
+#Right ul li {
+    list-style: none outside none;
+    margin-left: 0;
+    padding: 0 0 3px;
+}
+
+
+#Rightr {
+    position:absolute;
+    margin-top: -50px;
+	margin-left: 100%;
+	width: 250px;
+	-webkit-box-shadow:50px 50px 50px #ccc;
+	-moz-box-shadow:50px 50px 50px #ccc; 
+	box-shadow:50px 50px 50px #ccc;
+	background: #fff;  
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;  
+	padding: 10px;			
+}
+
+
+
+/*----------------------------------------------------------*/
+#films{
+	
+	width: 100%
+}
+
+/*----------------------------------------------------------*/
+
+#navbar_wrapper{margin-top:30px;margin-left:30px; }
+
+#navbar ul li { 
+padding:0; 
+margin: 0 20px 0 0; 
+display:inline;
+ 
+}
+
+#navbar a {
+	float:left; margin-right:10px;
+padding-left:30px;	padding-right:30px; padding-top:5px; padding-bottom:5px;
+color: #FFF; 
+text-transform: uppercase; 
+background-color: #708DAF;
+border: none;
+text-decoration:none;
+text-align: left;
+-webkit-box-shadow:0px 0 20px #ccc;
+-moz-box-shadow:0px 0 20px #ccc; 
+box-shadow:0px 0 20px #ccc;
+
+
+/* -- CSS3 Transition - define which property to animate (i.e. the shadow)  -- */
+-webkit-transition: -webkit-box-shadow 0.3s linear;
+
+/* -- CSS3 - Rounded Corners -- */
+-moz-border-radius: 4px; 
+-webkit-border-radius: 4px;
+border-radius: 4px; 
+				
+/* -- CSS3 Shadow - create a shadow around each input element -- */ 
+background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#18a5cc), to(#0a85a8)); 
+background: -moz-linear-gradient(25% 75% 90deg,#0a85a8, #18a5cc);
+}
+
+/*----------------------------------------------------------*/
+
+#footer {
+    position:relative;
+	
+   	margin: 0 auto;
+    min-width: 920px;
+    text-align: center;
+}
+
+/*----------------------------------------------------------*/
+div.field, div.actions { margin-bottom: 10px;}
+
+#notice {color: green;}
 
 .field_with_errors {
   padding: 2px;
@@ -30,27 +240,84 @@ div.field, div.actions {
   display: table;
 }
 
-#error_explanation {
-  width: 450px;
-  border: 2px solid red;
-  padding: 7px;
-  padding-bottom: 0;
-  margin-bottom: 20px;
-  background-color: #f0f0f0;
+#ErrorExplanation, #errorExplanation {
+    background-color: #F0F0F0;
+    border: 2px solid red;
+    margin-bottom: 20px;
+    padding: 7px 7px 12px;
+}
+#ErrorExplanation h2, #errorExplanation h2 {
+    background: url("/images/basecamp_sprites.png") no-repeat scroll -473px -10px #CC0000;
+    color: #FFFFFF;
+    font-size: 12px;
+    font-weight: bold;
+    margin: -7px;
+    padding: 5px 5px 5px 27px;
+    text-align: left;
+}
+#ErrorExplanation p, #errorExplanation p {
+    color: #333333;
+    margin-bottom: 0;
+    padding: 5px;
+}
+#ErrorExplanation ul, #errorExplanation ul {
+    margin-left: 30px;
+}
+#ErrorExplanation ul li, #errorExplanation ul li {
+    font-size: 12px;
+    list-style: square outside none;
 }
 
-#error_explanation h2 {
-  text-align: left;
-  font-weight: bold;
-  padding: 5px 5px 5px 15px;
-  font-size: 12px;
-  margin: -7px;
-  margin-bottom: 0px;
-  background-color: #c00;
-  color: #fff;
+table {
+ 	background:#fff;padding:5px;
+	
+    width:100%;
+
 }
 
-#error_explanation ul li {
-  font-size: 12px;
-  list-style: square;
+table td {
+  border:none; 
+  border-bottom:1px dotted #DBDDDC;
+  height:20px;
+  
 }
+
+table td.destroy a {
+  border:none; 
+  border-bottom:1px dotted #DBDDDC;
+  height:20px;
+  color:red;
+  
+}
+
+table th {
+  color: #000;
+  font-weight: normal;
+}
+
+table th a {
+  color: white;
+  text-decoration: underline; 
+}
+
+table tr.pays {
+  background: #FFF; color:#262626; 
+  border-bottom:1px dotted #DBDDDC;
+}
+
+table tr.result {
+  background: #fff; color:#262626; 
+	-webkit-box-shadow: 0px 0px 15px #DBDDDC;	
+	-moz-box-shadow: 0px 0px 6px #DBDDDC;	
+	box-shadow: 0px 0px 6px #DBDDDC;
+}
+
+table tr.result:hover {
+  background: #708DAF; color:#262626; 
+	-webkit-box-shadow: 0px 0px 15px #DBDDDC;	
+	-moz-box-shadow: 0px 0px 6px #DBDDDC;	
+	box-shadow: 0px 0px 6px #DBDDDC;
+	cursor:pointer;
+}
+
+#user_nav{position: relative; text-align: right; margin-right:15px;margin-bottom:5px;}

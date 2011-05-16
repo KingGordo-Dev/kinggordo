@@ -1,0 +1,11 @@
+$("<%= escape_javascript (render(:file => 'films/_form.html.erb')) %>").insertAfter('#films'); 
+$("#film_form").html("<%= escape_javascript(render(:partial => "form"))%>");
+
+$("#films").html("<%= escape_javascript( render(:partial => @film) ) %>").hide();
+
+
+
+
+
+
+    

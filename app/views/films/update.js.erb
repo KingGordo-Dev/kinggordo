@@ -1,0 +1,19 @@
+
+$("<%= escape_javascript (render(:file => 'films/_form.html.erb')) %>").hide(); 
+$(":input:not(input[type=submit])").hide();
+$(":submit:not(submit[type=submit])").hide();
+$("label").hide();
+$("form").hide();
+ 
+$("#films").html("<%= escape_javascript( render(:partial => @film) ) %>").show();
+
+
+/* Highlight the new comment */
+$("#film_<%= @film.id %>").effect("highlight", {}, 3000);
+$("#spinner").show();
+$("#spinner").fadeOut();
+$("#spinner").html("<img src='/images/loader-line.gif />");
+
+/* Reset the comment form */
+$("#edit_film")[0].reset();
+

@@ -1,0 +1,255 @@
+<%= form_for @film do |f| %>
+
+<div id="Left">
+  
+<div id="post_errors" style="display: none;"></div> 
+
+<div id="Right">    
+  <div class="submit"><%= f.submit nil,:class => "submit"%></div> 
+</div>
+
+<div class="button">
+<%= button_to_function "Title / Technical", "$('#ti').toggle()" %>
+<%= button_to_function "Functions / People", "$('#fp').toggle()" %>
+<%= button_to_function "Country / Theaters", "$('#sa').toggle()" %>
+</div>
+
+<div id="ti" style="display:none;" > 
+<fieldset id="title">
+  
+  <%= f.label :name , "Kind of movie"%>
+  <%= f.collection_select :moviselect_id, Moviselect.find(:all), :id, :name %><br/>
+  
+  <ol>
+    <li>
+      <label for="first_name">Original title</label><br/ >
+        <%=  f.text_field :name, :style =>"width:99%" %>
+    </li>
+  </ol>
+  
+  <ol>
+    <li>
+      <label for="first_name">Title translitération</label><br/ >  
+        <%=  f.text_field :titlea, :style =>"width:99%" %>
+    </li>
+  </ol>
+  
+  <ol>
+    <li>
+      <label for="first_name">Title literal translitération</label><br/ >  
+        <%=  f.text_field :titleb, :style =>"width:99%" %>
+    </li>
+  </ol>
+  
+  <ol>
+    <li>
+      <label for="first_name">Alternate title original</label><br/ >  
+        <%=  f.text_field :titlec, :style =>"width:99%" %>
+    </li>
+  </ol>
+  
+  <ol>
+    <li>
+      <label for="first_name">Alternate title translitération</label><br/ >  
+        <%=  f.text_field :titled, :style =>"width:99%" %>
+    </li>
+  </ol>
+  
+  <ol>
+    <li>
+      <label for="first_name">Episode title original</label><br/ >  
+        <%=  f.text_field :titlee, :style =>"width:99%" %>
+    </li>
+  </ol>
+  
+  <ol>
+    <li>
+      <label for="first_name">Based on</label>  
+        <%=  f.text_field :based_on, :style =>"width:40%" %> &nbsp;
+      <label for="first_name">from</label>  
+        <%=  f.text_field :autor, :style =>"width:48%" %>
+    </li>
+  </ol>
+  
+  <ol>
+    <li>
+      <label for="first_name">Company</label><br/ >  
+        <%= f.autocomplete_field :company, films_autocomplete_film_company_path,  :style =>"width:99%"%>
+    </li>
+  </ol>
+  
+  <ol>
+    <li>
+      <label for="first_name">Country</label><br/ >  
+        <%= f.text_field :country, :autocomplete => films_autocomplete_film_country_path,  :style =>"width:99%"%>
+    </li>
+  </ol>
+  
+  <ol>
+    <li>
+      <label for="first_name">Date of first release original</label><br/ >  
+        <%= f.date_select :start_date, :order => [:day, :month, :year],:start_year=> 1925, :end_year => 1935, :include_blank => true %>
+    </li>
+  </ol>
+  
+  <ol>
+    <li>
+      <label for="first_name">Year of production</label><br/ >  
+        <%= f.date_select :year_date ,:start_year=> 1925, :end_year => 1935,:discard_day => true, :discard_month => true, :include_blank => true %>
+    </li>
+  </ol>
+  
+  <ol>
+    <li>
+      <label for="first_name">Length in minutes</label><br/ >  
+        <%= f.text_field :lenght, :style =>"width:99%" %> 
+    </li>
+  </ol>
+  
+  <ol>
+    <li>
+      <label for="first_name">Color</label><br/ >  
+        <%= f.autocomplete_field :color, films_autocomplete_film_color_path,  :style =>"width:99%"%>
+    </li>
+  </ol>
+  
+  <ol>
+    <li>
+      <label for="first_name">Sound</label><br/ >  
+        <%= f.autocomplete_field :sound, films_autocomplete_film_sound_path,  :style =>"width:99%"%>
+    </li>
+  </ol>
+  
+  <br/>
+  
+  <%= f.fields_for :tecnicals do |builder| %>
+    <%= render "films/tecnical_fields", :f => builder %>      
+  <% end %>
+
+  <p class="add">
+    <%= link_to_add_fields "Add field", f, :tecnicals %> 
+  </p>
+  
+  <br/>  
+</fieldset>
+
+<hr/>
+
+<p class="done"> 
+ <%= link_to_function "I'm done with Title/Technical", "$('#ti').toggle()" %>
+</p>
+
+<br/>
+</div>
+
+
+<div id="fp" style="display:none;" >
+  
+<fieldset id="title">  
+<%= f.fields_for :functions do |builder| %>
+  <%= render "films/function_fields", :f => builder %>      
+<% end %>
+
+<p class="add">
+  <%= link_to_add_fields "Add function", f, :functions %> 
+</p>
+
+
+<br/>
+
+
+<hr/>
+
+<p class="done">
+<%= link_to_function "I'm done with functions/People", "$('#fp').toggle()" %> 
+</p>
+
+<br/>
+</fieldset>
+</div>
+
+
+
+<div id="sa" style="display:none;" >
+  <div class="buttoncountry">
+  <%= button_to_function "Paris", "$('#pa').toggle()" %> 
+  <%= button_to_function "Moscou", "$('#mos').toggle()" %> 
+  <%= button_to_function "Shangai", "$('#sha').toggle()" %>
+  </div>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  
+  
+   
+<div id="pa" style="display:none;" >
+     <%= f.fields_for :joints do |builder| %>
+       <%= render "films/joint_fields", :f => builder %>      
+     <% end %>
+
+     <p class="add">
+       <%= link_to_add_fields "Add theater", f, :joints %> 
+     </p>
+ 
+     <p class="done">
+      <%= link_to_function "I'm done with  Paris", "$('#pa').toggle()" %> 
+     </p>
+
+      <br/>
+      
+</div>
+
+
+<div id="mos" style="display:none;" >
+     <%= f.fields_for :jointbs do |builder| %>
+       <%= render "films/jointb_fields", :f => builder %>      
+     <% end %>
+
+     <p class="add">
+      <br/>
+       <%= link_to_add_fields "Add theater", f, :jointbs %> 
+     </p>
+
+     <p class="done">
+        <br/>
+       <%= link_to_function "I'm done with  Moscou", "$('#mos').toggle()" %> 
+     </p>
+
+       <br/>
+       
+</div>
+
+<div id="sha" style="display:none;" >
+     <%= f.fields_for :jointcs do |builder| %>
+       <%= render "films/jointc_fields", :f => builder %>      
+     <% end %>
+
+     <p class="add">
+      <br/>
+       <%= link_to_add_fields "Add theater", f, :jointcs %> 
+     </p>
+
+     <p class="done">
+        <br/>
+       <%= link_to_function "I'm done with  Shangai", "$('#sha').toggle()" %> 
+     </p>
+
+       <br/>
+    
+</div>
+     
+<br/>     
+<hr/>    
+  
+<p class="done">
+   <%= link_to_function "I'm done with  Country/Theaters", "$('#sa').toggle()" %> 
+</p>
+<br/>
+</div>
+
+
+
+</div>  
+<%end%>

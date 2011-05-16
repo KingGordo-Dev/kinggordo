@@ -1,0 +1,102 @@
+
+<%= form_for(@salle) do |f| %>
+<div id="Left">
+  
+  <div id="Right">    
+
+    <div class="submit"><%= f.submit "Update theater",:class => "submit"%></div>
+
+
+  </div>
+  
+  <h1>Editing theater</h1>
+  <% if @salle.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@salle.errors.count, "error") %> prohibited this theater from being saved:</h2>
+
+      <ul>
+      <% @salle.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+  
+
+  <div class="field">
+    
+    <%= f.label  "Choose city" %>
+    <%= f.collection_select :ville_id, Ville.find(:all), :id, :name%>
+    
+    <br />
+    <br />
+    
+    <%= f.label  "Theater name" %><br />
+    <%= f.text_field :name, :style =>"width:99%" %>
+    
+    <br />
+    <br />
+    
+    <%= f.label  "Theater district" %><br />
+    <%= f.text_field :district, :style =>"width:99%" %>
+    
+    <br />
+    <br />
+    
+    <%= f.label  "Theater adresse" %><br />
+    <%= f.text_field :adresse, :style =>"width:99%" %>
+    
+    <br />
+    <br />
+    
+    <%= f.label  "Theater owner" %><br />
+    <%= f.text_field :owner, :style =>"width:99%" %>
+    
+    <br />
+    <br />
+    
+    <%= f.label  "Place number" %><br />
+    <%= f.text_field :place, :style =>"width:99%" %>
+    
+    <br />
+    <br />
+    
+    <%= f.label  "Orchester" %><br />
+    <%= f.text_field :orchester, :style =>"width:99%" %>
+    
+    <br />
+    <br />
+    
+    <%= f.label "Opening days" %><br />
+    <%= f.text_field :open, :style =>"width:99%" %>
+    
+    <br />
+    <br />
+    
+    <%= f.label  "Comments" %><br />
+    <%= f.text_area :comment, :style =>"width:99%" %>
+    
+    <br />
+    <br />
+    
+    <%= f.label "Sources theater" %><br />
+    <%= f.text_field :source, :style =>"width:99%" %>
+  </div>
+  
+  <%= f.fields_for :salleinfos do |builder| %>
+    <%= render "salles/salleinfo_fields", :f => builder %>      
+  <% end %>
+
+  <p class="add">
+   <br/>
+    <%= link_to_add_fields "Add technical", f, :salleinfos %> 
+  </p>
+
+
+  <br/>
+  <br/>
+  <br/>
+  
+</div>
+<% end %>

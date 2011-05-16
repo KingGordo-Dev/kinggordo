@@ -1,0 +1,35 @@
+<div class="fields">
+ 
+<fieldset id="function">
+    <legend></legend> 
+    <ol>
+      <li>
+        <label for="first_name"><%= f.label :name, "Info:" %></label><br/>  
+          <%= f.text_field :name, :style =>"width:80%" %>
+          <p class="remove">
+          <%= link_to_remove_fields "Remove Info", f %>  
+          </p> 
+      </li>
+    </ol> 
+    
+    <br/>
+    
+    <%= f.fields_for :salleinfoattribs do |builder| %>
+      <%= render "salles/salleinfoattrib_fields", :f => builder %>
+    <% end %>
+
+    <p class="add_pers">
+      <br/>
+      
+      <%= link_to_add_fields "Add Attribute", f, :salleinfoattribs %>
+      
+    </p>
+
+    <br/>
+</fieldset>
+  
+  <br/>    
+  
+  
+  
+</div>

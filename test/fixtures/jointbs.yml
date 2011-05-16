@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  film_id: 1
+  salle_id: 1
+  ville_id: 1
+
+two:
+  film_id: 1
+  salle_id: 1
+  ville_id: 1

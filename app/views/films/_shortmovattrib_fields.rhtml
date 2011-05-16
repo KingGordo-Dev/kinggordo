@@ -1,0 +1,20 @@
+<div class="fields">
+  
+
+<fieldset id="people">
+        <legend></legend> 
+        <ol>
+          <li>
+            <label for="first_name"></label>
+              <%= f.select :film_id, options_for_select(Film.all(:order=> 'name asc',:conditions => "(moviselect_id) = #{2}").map {|o| [o.name, o.id]}, f.object.film_id) %>
+              <p class="remove">
+              <%= link_to_remove_fields "Remove", f %>
+              </p>   
+          </li>
+        </ol> 
+</fieldset>
+
+ 
+
+
+</div>

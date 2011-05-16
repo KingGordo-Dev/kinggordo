@@ -1,0 +1,25 @@
+
+<div id="film-notice"></div>
+<div id="Left">
+  
+  <div id="Right">    
+    <div class="submit"><%= link_to 'Add Film', new_film_path, :class=>"submit" %></div>
+    
+  </div>
+  
+<h1>Search Films</h1>
+<%= form_tag films_path, :method => 'get', :id => "films_search" do %>
+<div id='search'>
+  <p>
+    <%= text_field_tag :search, params[:search],:style =>"width:50%" %>
+    <%= submit_tag "Search", :name => nil %>
+  </p>
+</div>
+
+  <div id="filmsearchs"><%= render 'filmsearchs' %></div>
+<% end %>
+
+
+
+</div> 
+

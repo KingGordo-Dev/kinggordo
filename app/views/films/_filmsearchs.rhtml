@@ -1,0 +1,34 @@
+<%= hidden_field_tag :direction, params[:direction] %>
+<%= hidden_field_tag :sort, params[:sort] %>
+
+<table>
+  <tr class="pays">
+    <th><%= sortable "Original title" %></th>
+    <th><%= sortable "Title transliteration" %></th>
+    <th><%= sortable "Company" %></th>
+    <th><%= sortable "Country" %></th>
+    <th><%= sortable "Date of first release original" %></th>
+    <th><%= sortable "Color" %></th>
+    <th><%= sortable "Sound" %></th> 
+  </tr>
+  
+  <% for film in @films %>
+    <tr class="result">
+      <td><%= link_to film.name, film %></td>
+      <td class="price"><%= film.titlea %></td>
+      <td><%=  film.company %></td>
+      <td><%=  film.country %></td>
+      <td><%=  film.start_date %></td>   
+      <td><%=  film.color %></td>
+      <td><%=  film.sound %></td>
+      <td class="destroy"><%= link_to 'Destroy', film, :confirm => 'Are you sure?', :method => :delete %></td>
+      
+      
+    </tr>
+  <% end %>
+</table>
+
+<br/>
+<br/>
+<%= will_paginate @films %>
+

@@ -1,0 +1,470 @@
+hr{color:#ddd;}
+
+form{
+	
+	width: 100%
+	padding: 20px 20px 20px 20px;
+}
+form p{ margin-left:15px;}
+
+label {	
+	font-size: 14px; margin-right:10px; margin-left:10px;
+	color: #666; 
+}
+input{margin-top:5px; }
+
+
+fieldset {	
+    margin-bottom: 15px;
+    padding: 0px;
+}
+
+fieldset p {
+    color: #666666;
+    font-size: 11px;
+    margin: 0 0 5px;
+    padding: 0;
+}
+fieldset legend {
+    color: #874C00;
+    font-size: 12px;
+    font-weight: bold;
+}
+fieldset legend span {
+    color: #666666;
+    font-size: 80%;
+    font-weight: normal;
+}
+
+fieldset#title{
+	
+	
+	margin-bottom: 15px;
+	padding: 10px;
+	border-bottom: solid 1px #E5E5E5;
+	-webkit-box-shadow:0px 0 5px #ccc;
+	-moz-box-shadow:0px 0px 5px #ccc; 
+	box-shadow:0px 0 5px #ccc;
+	
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	
+}
+
+fieldset#title p {
+    color: #666666;
+    font-size: 11px;
+    margin: 0 0 5px;
+    padding: 0;
+}
+fieldset#title legend {
+    color: #874C00;
+    font-size: 12px;
+    font-weight: bold;
+}
+fieldset#title legend span {
+    color: #666666;
+    font-size: 80%;
+    font-weight: normal;
+}
+
+fieldset#function{
+	min-height:50px;
+	margin-bottom: 15px;
+	padding: 20px;
+	margin-left:-15px;
+	border-bottom: solid 1px #E5E5E5;
+	-webkit-box-shadow:0px 0 5px #ccc;
+	-moz-box-shadow:0px 0px 5px #ccc; 
+	box-shadow:0px 0 5px #ccc;
+	
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+fieldset#function p {
+    color: #666666;
+    font-size: 11px;
+    margin: 0 0 5px;
+    padding: 0;
+}
+fieldset#function legend {
+    color: #874C00;
+    font-size: 12px;
+    font-weight: bold;
+}
+fieldset#function legend span {
+    color: #666666;
+    font-size: 80%;
+    font-weight: normal;
+}
+
+
+
+
+fieldset#people{
+	
+	margin-bottom: 15px;
+	padding: 10px;
+	border-bottom: solid 1px #E5E5E5;
+	-webkit-box-shadow:0px 0 5px #ccc;
+	-moz-box-shadow:0px 0px 5px #ccc; 
+	box-shadow:0px 0 5px #ccc;
+	
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+fieldset#people p {
+    color: #666666;
+    font-size: 11px;
+    margin: 0 0 5px;
+    padding: 0;
+}
+fieldset#people legend {
+    color: #874C00;
+    font-size: 12px;
+    font-weight: bold;
+}
+fieldset#people legend span {
+    color: #666666;
+    font-size: 80%;
+    font-weight: normal;
+}
+
+input, textarea, select{ 		
+  
+	    padding: 4px;  
+	    border: solid 1px #C9C9C9;  
+	    outline: 0;  
+	    font: normal 12px/100% Arial, Verdana, sans-serif;  
+
+	    background: #FFFFFF url('bg_form.png') left top repeat-x;  
+	    background: -webkit-gradient(linear, left top, left 25, from(#FFFFFF), color-stop(4%, #EEEEEE), to(#FFFFFF));  
+	    background: -moz-linear-gradient(top, #FFFFFF, #EEEEEE 1px, #FFFFFF 25px);  
+	    box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;  
+	    -moz-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;  
+	    -webkit-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
+
+}
+
+input:hover, textarea:hover, 
+input:focus, textarea:focus {   border-color: #E5E5E5;  -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 8px;  
+}
+
+textarea {		
+	width: 390px; 
+	height: 175px; 		 		
+}
+
+
+	
+input.submit { 
+	position:absolute;
+	margin-left:0px;
+	margin-top:5px;	
+	width: 155px; 
+	
+	color: #eee; 
+	text-transform: uppercase; 
+	background-color: #DD4702;
+	border: none;
+	
+	/* -- CSS3 Transition - define which property to animate (i.e. the shadow)  -- */
+	-webkit-transition: -webkit-box-shadow 0.3s linear;
+	
+	/* -- CSS3 - Rounded Corners -- */
+	-moz-border-radius: 4px; 
+	-webkit-border-radius: 4px;
+	border-radius: 4px; 
+					
+	/* -- CSS3 Shadow - create a shadow around each input element -- */ 
+	
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#DD4702), to(#F29108)); 
+	background: -moz-linear-gradient(25% 75% 90deg,#F29108, #DD4702);		
+} 
+
+input.submit:hover { 		
+	-webkit-box-shadow: 0px 0px 20px #555;
+	-moz-box-shadow: 0px 0px 20px #aaa; 
+	box-shadow: 0px 0px 20px #555;	
+	cursor:  pointer; 
+}
+
+.submit a.submit{
+	position:absolute;
+	margin-top:5px; 
+	width: 100px;
+	padding-left:30px;	padding-right:25px; padding-top:5px; padding-bottom:5px;
+	color: #eee; 
+	text-transform: uppercase; 
+	background-color: #DD4702;
+	border: none;
+	text-decoration:none;
+	text-align: center;
+	
+	/* -- CSS3 Transition - define which property to animate (i.e. the shadow)  -- */
+	-webkit-transition: -webkit-box-shadow 0.3s linear;
+	
+	/* -- CSS3 - Rounded Corners -- */
+	-moz-border-radius: 4px; 
+	-webkit-border-radius: 4px;
+	border-radius: 4px; 
+					
+	/* -- CSS3 Shadow - create a shadow around each input element -- */ 
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#DD4702), to(#F29108)); 
+	background: -moz-linear-gradient(25% 75% 90deg,#F29108, #DD4702);
+		
+} 
+
+.submit a.submit:hover { 		
+	-webkit-box-shadow: 0px 0px 20px #555;
+	-moz-box-shadow: 0px 0px 20px #aaa; 
+	box-shadow: 0px 0px 20px #555;	
+	cursor:  pointer; 
+}
+
+.button {
+	margin-left:0px; background:#708DAF; height:50px; margin-bottom:30px; padding-left:15px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;}
+ 
+.button input{ 
+		
+	width: 200px;
+	margin-right:15px; margin-top:12px;
+	color: #eee; 
+	text-transform: uppercase; 
+	background-color: #18a5cc;
+	border: none;
+	
+	/* -- CSS3 Transition - define which property to animate (i.e. the shadow)  -- */
+	-webkit-transition: -webkit-box-shadow 0.3s linear;
+	
+	/* -- CSS3 - Rounded Corners -- */
+	-moz-border-radius: 2px; 
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+					
+	/* -- CSS3 Shadow - create a shadow around each input element -- */ 
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#18a5cc), to(#0a85a8)); 
+	background: -moz-linear-gradient(25% 75% 90deg,#0a85a8, #18a5cc);		
+}
+
+.button input:hover { 		
+	-webkit-box-shadow: 0px 0px 20px #555;
+	-moz-box-shadow: 0px 0px 20px #aaa; 
+	box-shadow: 0px 0px 20px #555;	
+	cursor:  pointer; 
+}
+
+.buttoncountry {
+	margin-left:0px;  height:0px; margin-bottom:0px; padding-left:15px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;}
+ 
+.buttoncountry input{ 
+		
+	width: 200px;
+	margin-right:15px; margin-top:0px;
+	color: #eee; 
+	text-transform: uppercase; 
+	background-color: #18a5cc;
+	border: none;
+	text-align:center
+	
+	/* -- CSS3 Transition - define which property to animate (i.e. the shadow)  -- */
+	-webkit-transition: -webkit-box-shadow 0.3s linear;
+	
+	/* -- CSS3 - Rounded Corners -- */
+	-webkit-box-shadow: 0px 0px 5px #555;
+	-moz-box-shadow: 0px 0px 5px #aaa; 
+	box-shadow: 0px 0px 5px #555;
+	
+	-moz-border-radius: 2px; 
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+					
+	/* -- CSS3 Shadow - create a shadow around each input element -- */ 
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#18a5cc), to(#0a85a8)); 
+	background: -moz-linear-gradient(25% 75% 90deg,#0a85a8, #18a5cc);		
+}
+
+.buttoncountry input:hover { 		
+	-webkit-box-shadow: 0px 0px 20px #555;
+	-moz-box-shadow: 0px 0px 20px #aaa; 
+	box-shadow: 0px 0px 20px #555;	
+	cursor:  pointer; 
+}
+
+p.done a{ 
+	float:right;	
+	padding-left:10px;	padding-right:10px; padding-top:5px; padding-bottom:5px;
+	color: #000; 
+	text-decoration:none;
+	background-color: #00BB99;
+	border: none;
+	
+	/* -- CSS3 Transition - define which property to animate (i.e. the shadow)  -- */
+	-webkit-transition: -webkit-box-shadow 0.3s linear;
+	
+	/* -- CSS3 - Rounded Corners -- */
+	-moz-border-radius: 4px; 
+	-webkit-border-radius: 4px;
+	border-radius: 4px; 
+	
+	-webkit-box-shadow: 0px 0px 10px #555;
+	-moz-box-shadow: 0px 0px 10px #aaa; 
+	box-shadow: 0px 0px 10px #555;
+					
+	/* -- CSS3 Shadow - create a shadow around each input element -- */ 
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#FFBF17), to(#FBDD3D)); 
+	background: -moz-linear-gradient(25% 75% 90deg,#FBDD3D, #FFBF17);
+	
+}
+
+p.done a:hover { 		
+	-webkit-box-shadow: 0px 0px 20px #555;
+	-moz-box-shadow: 0px 0px 20px #aaa; 
+	box-shadow: 0px 0px 20px #555;	
+	cursor:  pointer; 
+}
+
+p.donebis a{ 
+	float:right;	
+	padding-left:10px;	padding-right:10px; padding-top:5px; padding-bottom:5px;
+	color: #000; 
+	text-decoration:none;
+	background-color: #00BB99;
+	border: none;
+	
+	/* -- CSS3 Transition - define which property to animate (i.e. the shadow)  -- */
+	-webkit-transition: -webkit-box-shadow 0.3s linear;
+	
+	/* -- CSS3 - Rounded Corners -- */
+	-moz-border-radius: 4px; 
+	-webkit-border-radius: 4px;
+	border-radius: 4px; 
+	
+	-webkit-box-shadow: 0px 0px 10px #555;
+	-moz-box-shadow: 0px 0px 10px #aaa; 
+	box-shadow: 0px 0px 10px #555;
+					
+	/* -- CSS3 Shadow - create a shadow around each input element -- */ 
+	background: green 
+			
+}
+
+p.donebis a:hover { 		
+	-webkit-box-shadow: 0px 0px 20px #555;
+	-moz-box-shadow: 0px 0px 20px #aaa; 
+	box-shadow: 0px 0px 20px #555;	
+	cursor:  pointer; 
+}
+
+p.add a{ 
+	float:left;	
+	color: #005B6E; 
+	text-decoration:none;	
+	border: none;
+	
+	/* -- CSS3 Transition - define which property to animate (i.e. the shadow)  -- */
+	-webkit-transition: -webkit-box-shadow 0.3s linear;
+	
+	/* -- CSS3 - Rounded Corners -- */
+
+					
+	/* -- CSS3 Shadow - create a shadow around each input element -- */ 
+	
+}
+
+p.add a:hover {
+	color: #000; 				
+	cursor:  pointer; 
+}
+
+p.add_pers a{ 
+	float:left;	
+	color: #005B6E; 
+	text-decoration:none;
+	border: none;
+	
+	/* -- CSS3 Transition - define which property to animate (i.e. the shadow)  -- */
+	-webkit-transition: -webkit-box-shadow 0.3s linear;
+	
+	/* -- CSS3 - Rounded Corners -- */
+	
+					
+	/* -- CSS3 Shadow - create a shadow around each input element -- */ 
+			
+}
+
+p.add_pers a:hover { 		
+		
+	cursor:  pointer; 
+}
+
+p.remove { 
+	float:right;	
+	
+	color: red; 
+	text-decoration:none;
+		
+}
+p.remove a { 	
+	
+	color: red; 
+	text-decoration:none;
+	
+}
+
+
+
+.field{margin-left:15px;margin-top:15px;}
+.fields{margin-left:15px;}
+
+
+
+div.autocomplete {
+  margin:0px;  
+  padding:0px;  
+  width:250px;
+  background:#fff;
+  border:1px solid #888;
+  position:absolute;
+}
+
+div.autocomplete ul {
+  margin:0px;
+  padding:0px;
+  list-style-type:none;
+}
+
+div.autocomplete ul li.selected { 
+  background-color:#ffb;
+}
+
+div.autocomplete ul li {
+  margin:0;
+  padding:2px;
+  height:32px;
+  display:block;
+  list-style-type:none;
+  cursor:pointer;
+}
+#search{
+	position:relative;
+	margin-top:-68px;
+	margin-left:100px;
+	margin-bottom:20px;
+
+}
+
+#close{
+	float:right;
+}

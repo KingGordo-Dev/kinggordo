@@ -1,0 +1,31 @@
+
+
+
+
+
+<%= form_for @film do |f| %>
+<div id="Left">
+<div id="post_errors" style="display: none;"></div> 
+
+<div id="Right">
+  <div class="submit">
+    <%= f.submit nil,:class => "submit" %>
+  </div>
+</div>
+
+<h1>New film</h1>
+
+    <%= f.label :name , "Which kind of movie ?"%>
+    <%= f.collection_select :moviselect_id, Moviselect.find(:all), :id, :name %><br/>
+
+    <%= f.label :name , "Originale title :"%>
+    <%=  f.text_field :name, :style =>"width:99%" %>
+
+</div>
+
+
+<%end%>
+
+
+
+

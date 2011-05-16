@@ -1,0 +1,31 @@
+<div class="fields">
+ 
+<fieldset id="function">
+  
+    <ol>
+      <li>
+        <label for="first_name"><%= f.label :name, "Function:" %></label><br/>  
+          <%= f.autocomplete_field :name, films_autocomplete_function_name_path, :style =>"width:80%" %>
+          <p class="remove">
+          <%= link_to_remove_fields "Remove fonction", f %>  
+          </p> 
+      </li>
+    </ol> 
+    
+    <br/>
+    
+    <%= f.fields_for :people do |builder| %>
+      <%= render "films/person_fields", :f => builder %>
+    <% end %>
+
+    <p class="add_pers">
+      <%= link_to_add_fields "Add person", f, :people %>  
+    </p>
+
+    <br/>
+</fieldset>
+  
+  <br/>    
+  
+</div>
+

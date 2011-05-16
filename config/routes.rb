@@ -1,5 +1,41 @@
 Kinggordo::Application.routes.draw do
+  
+  devise_for :users
+
+  get 'films/autocomplete_function_name'
+  get 'films/autocomplete_person_name'
+  get 'films/autocomplete_film_country'
+  get 'films/autocomplete_film_company'
+  get 'films/autocomplete_film_color'
+  get 'films/autocomplete_film_sound'
+  get 'films/autocomplete_film_producer'
+  get 'films/all'
+  
+  
+  
+ 
+  
+  
   resources :users
+  resources :salles
+  resources :villes
+  resources :functions
+  resources :people 
+  
+  
+
+  resources :films  do 
+    resources :users
+    
+    resources :functions do
+      resources :people
+    end
+    
+    resources :salles do 
+      resources :villes
+    end
+    
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -50,7 +86,7 @@ Kinggordo::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => "welcome#index"
+  root :to => "films#index"
 
   # See how all your routes lay out with "rake routes"
 

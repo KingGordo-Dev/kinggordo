@@ -1,0 +1,23 @@
+$("#film-notice").html('<div class="flash notice"><%= escape_javascript(flash.delete(:notice)) %></div>');
+
+/* Add the new comment to the bottom of the comments list */
+$("#films").html("<%= escape_javascript( render(:partial => @film) ) %>");
+
+/* Highlight the new comment */
+$("#film_<%= @film.id %>").effect("highlight", {}, 3000);
+
+/* Reset the comment form */
+$("#new_film")[0].reset();
+
+
+  */Hide the div post_errors*/
+  $("#post_errors").hide(300);
+ 
+  */Update the html of the div flash_notice with the new one*/
+  $("#flash_notice").html("<%= escape_javascript(flash[:notice])%>");
+ 
+  */Show the flash_notice div*/
+  $("#flash_notice").show(300);
+ 
+  */Clear the entire form*/
+  $(":input:not(input[type=submit])").val("");

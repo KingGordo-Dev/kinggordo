@@ -1,0 +1,118 @@
+<div class="fields">
+  
+<fieldset id="people"> 
+        <ol>
+          <li>
+            <label for="first_name"></label>
+              <%= f.select :ville_id, options_for_select(Ville.all(:order=> 'name asc',:conditions => "(id) = #{1}").map {|o| [o.name, o.id]}, f.object.ville_id) %> &nbsp;
+              <%= f.select :salle_id, options_for_select(Salle.all(:order=> 'name asc',:conditions => "(ville_id) = #{1}").map {|p| [p.name, p.id]}, f.object.salle_id) %> &nbsp; 
+              
+              Run date :
+              <%= f.date_select :start_date, :order => [:day, :month, :year],
+              									   :start_year=> 1925, :end_year=> 1935 , :include_blank=>true%> &nbsp;to&nbsp;
+              
+              <%= f.date_select :end_date, :order => [:day, :month, :year],
+                                   :start_year=>1925 , :end_year=> 1935, :include_blank=>true%>
+                <hr/>                  
+              
+                <li>
+                 Release title :
+                    <%=  f.text_field :titreoriginalb, :style =>"width:40%" %> &nbsp;
+                 
+                 Episode title release:
+                    <%=  f.text_field :episode, :style =>"width:35%" %>
+                </li>
+                
+                <hr/>
+                 
+                <li>
+                 Genre as advertised :
+                      <%=  f.text_field :genre, :style =>"width:18%" %> &nbsp;
+                      
+                 Screening schedule :
+                    <%=  f.text_field :schedule, :style =>"width:20%" %> &nbsp;
+              
+                 Screening prices
+                    <%=  f.text_field :price, :style =>"width:20%" %>
+                </li>
+                
+                <hr/>
+              
+              <%= link_to_function "Edit show", "$('##{f.id}').toggle()" %>
+              
+              
+              <div id="<%=f.id%>" style="display:none;" >
+                
+                <li>
+                Audience :
+                <%=  f.text_field :audience, :style =>"width:40%" %> &nbsp;
+
+                Source show :
+                <%=  f.text_field :source, :style =>"width:41%" %>
+                </li>
+                
+                <hr/>
+                
+                Comment :
+                
+                <%=  f.text_area :comment, :style =>"width:98%" %>
+                
+                
+                <hr/>
+                
+             
+             
+              <%= f.fields_for :featuremovattribs do |builder| %>
+                <%= render "films/featuremovattrib_fields", :f => builder %>      
+              <% end %>
+            
+              <p class="a">
+                <%= link_to_add_fields "Add Other feature movies attribute", f, :featuremovattribs %> 
+              </p>
+              
+              <hr/>
+               
+             
+              
+              <%= f.fields_for :shortmovattribs do |builder| %>
+                <%= render "films/shortmovattrib_fields", :f => builder %>      
+              <% end %>
+
+              <p class="a">
+                <%= link_to_add_fields "Add Short movie attribute", f, :shortmovattribs %> 
+              </p>
+
+               
+              <hr/>
+                            
+             
+                      
+              <%= f.fields_for :onstageattribs do |builder| %>
+                <%= render "films/onstageattrib_fields", :f => builder %>      
+              <% end %>
+
+              <p class="a">
+                <%= link_to_add_fields "Add On stage attribute", f, :onstageattribs %> 
+              </p>
+                      
+              <hr/>
+             
+              <p class="done">
+               <%= link_to_function "I'm done with  this show", "$('##{f.id}').toggle()" %> 
+              </p>
+                            
+             </div>
+              <br/>
+              <br/>
+              <br/>
+              <br/>
+              <hr/>
+             <p class="remove">
+             <%= link_to_remove_fields "Remove this theater", f %>
+             </p>
+              
+          </li>
+        </ol> 
+</fieldset>
+
+</div>
